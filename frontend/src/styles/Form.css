@@ -7,6 +7,7 @@
   display: flex;
   justify-content: center;
   width: 100%;
+  margin-bottom: 3%;
 }
 
 .form {
@@ -14,8 +15,8 @@
   grid-template-columns: 0.5fr 0.5fr;
   border: 3px solid var(--green);
   border-radius: 4px;
-  width: 120%;
-  height: 300px;
+  width: 75%;
+  height: 230px;
   padding-right: 2%;
 }
 
@@ -24,16 +25,14 @@
   justify-content: right;
   align-items: center;
   font-weight: bold;
-  font-size: 130%;
+  font-size: 100%;
   color: var(--green);
 }
 
 .form input{
-  margin-bottom: 5px;
-  margin-top: 5px;
   margin-left: 10px;
   margin-right: 2%;
-  height: 50%;
+  height: 35%;
   width: 40%;
   font-size: 80%;
   padding-left: 2%;

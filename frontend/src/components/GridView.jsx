@@ -27,6 +27,8 @@ function GridView() {
             type="number"
             value={rows}
             onChange={(e) => setRows(Number(e.target.value))}
+            min="1"
+            max="15"
           />
         </label>
         <label>
@@ -35,6 +37,8 @@ function GridView() {
             type="number"
             value={columns}
             onChange={(e) => setColumns(Number(e.target.value))}
+            min="1"
+            max="15"
           />
         </label>
       </div>
