@@ -12,12 +12,12 @@ h1 {
 }
 
 .header {
-  background-color: #e8f7fc; /* Light blue background */
-  
+  background-image: linear-gradient(#F0F8FF, white); /* Light blue background */
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 32px;
+  height: 120%;
 }
 @keyframes fadeIn {
   0% { opacity: 0; }

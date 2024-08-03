@@ -15,7 +15,7 @@
   width: 20%;
   font-weight: bold;
   height: 30px;
-  border: 2px solid var(--green);
+  border: None;
   border-radius: 2px;
   background-image: linear-gradient(to right, #008000, #008200, #228B22, #8FBC8B);
   color: white;
