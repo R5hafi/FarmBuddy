@@ -4,7 +4,7 @@ import { useContext } from 'react';
 import { SelectedCellContext } from '../contexts/SelectedCellContext'
 
 function Form() {
-  function onSumbit() {
+  function onSubmit() {
       // get context
       const { selectedCells, setSelectedCells } = useContext(SelectedCellContext);
       // toggle off all of the selected cells.
