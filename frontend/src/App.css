@@ -30,7 +30,7 @@ h1 {
 }
 
 .soil {
-  background-image: url('./soil_bg.jpg');
+  background: linear-gradient(to bottom, #daf6ff, #98FB98);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
