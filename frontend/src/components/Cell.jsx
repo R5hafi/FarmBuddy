@@ -1,9 +1,15 @@
 import React from 'react';
 
-function Cell({ row, column }) {
+function Cell({ row, column, size }) {
+    const cellStyle = {
+        width: `${size}px`,
+        height: `${size}px`
+      };
+
   return (
-    <div className="cell">
-      Cell ({row}, {column})
+    <div className="cell" style={cellStyle}>
+      Cell ({row}, {column} {size})
+
     </div>
   );
 }
