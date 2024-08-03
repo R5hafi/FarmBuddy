@@ -27,7 +27,7 @@ function Form() {
       for (let i = 0; i < selectedCells.length; i++) {
         document.getElementById(selectedCells[i]).classList.toggle('highlight');
 
-        document.getElementById(selectedCells[i]).innerText = `${currentData.percentage}%`;
+        document.getElementById(selectedCells[i]).innerText = `${currentData.Percentage}%`;
       }
       setSelectedCells([]);
       //clear all input values
