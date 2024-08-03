@@ -1,9 +1,35 @@
-.plant-container {
-  background-color: #006400;
-  border-radius: 80%;
+#plant-list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 2%;
 }
 
-.plant-container img {
-  border-radius: 50%;
-  border: 2px solid black;
+.plant-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  background-color: #006400;
+  border-radius: 20% / 50%;
+  padding: 10px;
+  width: 10%;
+  height: 40px;
+  margin-right: 1%;
+  margin-left: 1%;
+}
+
+.plant-container > img {
+  border-radius: 50%; 
+
+  height: 30px; /* Set height */
+  width: 30px; /* Set width */
+  object-fit: cover; /* Ensure the image covers the circle without distortion */
+  margin-left: 10px; /* Space between text and image */
+}
+
+.plant-container > span {
+  color: white;
+  font-weight: bold;
+  font-size: 170%;
 }

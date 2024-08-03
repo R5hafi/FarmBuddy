@@ -20,7 +20,11 @@ function App() {
         <SelectedCellProvider>
           <h1>Plot Perfect</h1>
           <Form></Form>
-          <Plant name="Plant" imageurl="https://laidbackgardener.blog/wp-content/uploads/2017/11/20171205a-petr-kratochvil-publicdomainepictures-net.jpg"></Plant>
+          <div id="plant-list">
+            <Plant name="Plant" imageurl="https://laidbackgardener.blog/wp-content/uploads/2017/11/20171205a-petr-kratochvil-publicdomainepictures-net.jpg"></Plant>
+            <Plant name="Plant" imageurl="https://laidbackgardener.blog/wp-content/uploads/2017/11/20171205a-petr-kratochvil-publicdomainepictures-net.jpg"></Plant>
+          </div>
+          
           <GridView count={count} setCount={changeCount}></GridView>
         </SelectedCellProvider>
       </div>

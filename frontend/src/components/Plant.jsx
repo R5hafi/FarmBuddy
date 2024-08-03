@@ -5,8 +5,9 @@ function Plant({name, imageurl}) {
     <>
       <div className="plant-container">
         <span>{name}</span>
-        <img src={imageurl} alt={"Picture of " + name} height="30px" width="30px"/>
-      </div>
+        <img src={imageurl} alt={"Picture of " + name} height="100px" width="100px"/>
+      </div>  
+      
     </>
   )
 }
