@@ -9,6 +9,7 @@ function App() {
     <>
       <div>
         <Form />
+        <GridView></GridView>
       </div>
     </>
   )
