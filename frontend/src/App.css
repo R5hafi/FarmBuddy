@@ -13,7 +13,7 @@ h1 {
 
 .header {
   background-color: #e8f7fc; /* Light blue background */
-  border-bottom: 5px solid #7b6d62; /* Brown bottom border */
+  
   display: flex;
   justify-content: center;
   align-items: center;
