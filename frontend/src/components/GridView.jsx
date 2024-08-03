@@ -7,6 +7,12 @@ function GridView({count, setCount}) {
   const [rows, setRows] = useState(3);
   const [columns, setColumns] = useState(3);  
   const [size, setSize] = useState(150);
+  const [highlighted, setHighlighted] = useState(false);
+
+  function highlight () { //to ensure only one cell stays highlighted
+    setHighlighted(prevValue => !prevValue);
+  }
+
   // helper function to get dimensions of screen.
   function getWindowDimensions() {
     const hasWindow = typeof window !== 'undefined';
