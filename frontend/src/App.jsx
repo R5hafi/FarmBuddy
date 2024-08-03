@@ -23,6 +23,8 @@ function App() {
           <div id="plant-list">
             <Plant name="Plant" imageurl="https://laidbackgardener.blog/wp-content/uploads/2017/11/20171205a-petr-kratochvil-publicdomainepictures-net.jpg"></Plant>
             <Plant name="Plant" imageurl="https://laidbackgardener.blog/wp-content/uploads/2017/11/20171205a-petr-kratochvil-publicdomainepictures-net.jpg"></Plant>
+            <Plant name="Plant" imageurl="https://laidbackgardener.blog/wp-content/uploads/2017/11/20171205a-petr-kratochvil-publicdomainepictures-net.jpg"></Plant>
+            <Plant name="Plant" imageurl="https://laidbackgardener.blog/wp-content/uploads/2017/11/20171205a-petr-kratochvil-publicdomainepictures-net.jpg"></Plant>
           </div>
           
           <GridView count={count} setCount={changeCount}></GridView>
