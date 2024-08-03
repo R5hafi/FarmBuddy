@@ -18,7 +18,9 @@ function App() {
     <>
       <div>
         <SelectedCellProvider>
+        <section className="soil">
 
+        
         <header className="header">
           <h1 className="title">Plot Perfect</h1>
         </header>
@@ -30,11 +32,12 @@ function App() {
             <Plant name="Plant" imageurl="https://laidbackgardener.blog/wp-content/uploads/2017/11/20171205a-petr-kratochvil-publicdomainepictures-net.jpg"></Plant>
             <Plant name="Plant" imageurl="https://laidbackgardener.blog/wp-content/uploads/2017/11/20171205a-petr-kratochvil-publicdomainepictures-net.jpg"></Plant>
           </div>
-          <section className="soil">
+          
             <GridView count={count} setCount={changeCount}></GridView>
           </section>
         </SelectedCellProvider>
       </div>
+      
     </>
   )
 }
