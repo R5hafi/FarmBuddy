@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
+import "../styles/Modal.css";
 
 Modal.setAppElement('#root'); // This is to avoid screen readers issues
 
@@ -16,16 +17,19 @@ const ModalInfo = ({ isOpen, onRequestClose, title, content }) => {
           bottom: 'auto',
           marginRight: '-50%',
           transform: 'translate(-50%, -50%)',
-          padding: '20px',
+          padding: '0px',
           borderRadius: '10px',
           width: '400px',
+          height: '20%',
           textAlign: 'center'
         }
       }}
     >
-      <h2>{title}</h2>
-      <p>{content}</p>
-      <button onClick={onRequestClose}>Close</button>
+      <div class="modal-container">
+        <h2>{title}</h2>
+        <p>{content}</p>
+        <button onClick={onRequestClose}>Close</button>
+      </div>
     </Modal>
   );
 }

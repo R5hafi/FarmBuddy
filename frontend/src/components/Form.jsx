@@ -47,6 +47,7 @@ function Form() {
           <label>Humidity (%)<input type="text" /></label>
           <label>pH value of the soil <input type="text" /></label>
           <label>Rainfall (mm)<input type="text" /></label>
+          <label>Plant <input type="text" /></label>
         </div>
         <button type="submit" onClick={() => {
           onSubmit();

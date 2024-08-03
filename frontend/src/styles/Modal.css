@@ -1,0 +1,25 @@
+.modal-container {
+  background-image: linear-gradient(to right, #95d6d9, #9fe09f);
+  overflow: auto;
+  color: white;
+  height: 100%;
+}
+
+.model-container h2{
+  font-weight: bold;
+  font-size: 130%;
+}
+
+.modal-container p{
+  font-size: 120%;
+  margin-bottom: 45px;
+}
+
+.modal-container button {
+  color: white;
+  border: 1px solid white;
+  background: none;
+  padding: 10px;
+  cursor: pointer;
+  align-self: center;
+}
