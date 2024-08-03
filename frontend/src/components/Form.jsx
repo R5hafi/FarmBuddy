@@ -4,14 +4,16 @@ import { useContext } from 'react';
 import { SelectedCellContext } from '../contexts/SelectedCellContext'
 
 function Form() {
-  function onSumbit() {
-      // get context
-      const { selectedCells, setSelectedCells } = useContext(SelectedCellContext);
+  // get context
+  const { selectedCells, setSelectedCells } = useContext(SelectedCellContext);
+  function onSubmit() {
+
       // toggle off all of the selected cells.
       for (let i = 0; i < selectedCells.length; i++) {
         document.getElementById(selectedCells[i]).classList.toggle('highlight');
       }
       setSelectedCells([]);
+      console.log("dsfsdf")
   }
 
   return (
@@ -26,7 +28,9 @@ function Form() {
           <label>pH value of the soil <input type="text" /></label>
           <label>Rainfall (mm)<input type="text" /></label>
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit" onClick={() => {
+          onSubmit();
+        }}>Submit</button>
       </div>
     </>
   )
