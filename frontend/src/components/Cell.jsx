@@ -5,7 +5,7 @@ import { SelectedCellContext } from '../contexts/SelectedCellContext'
 import ModalInfo from './ModalInfo';
 function Cell({ id, row, column, size }) {
     const [isModalOpen, setIsModalOpen] = useState(false);
-
+    const [hasData, setHasData] = useState(false);
     const cellStyle = {
         width: `${size}px`,
         height: `${size}px`,
@@ -27,7 +27,7 @@ function Cell({ id, row, column, size }) {
     });
     setIsModalOpen(true);
   }
-
+  if (hasData) {
   return (
     <>
       <div id={id} className="cell" onClick={() => handleClick()} style={cellStyle}>
@@ -41,6 +41,11 @@ function Cell({ id, row, column, size }) {
       />
     </>
   );
+  } else {
+    return <div id={id} className="cell" onClick={() => handleClick()} style={cellStyle}>
+        Cell ({row}, {column})
+      </div>
+  }
 }
 
 export default Cell;
