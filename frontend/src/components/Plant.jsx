@@ -1,5 +1,5 @@
 import React from "react"
-
+import '../styles/Plant.css'
 function Plant({name, imageurl}) {
   return (
     <>
