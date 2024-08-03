@@ -18,7 +18,9 @@ function App() {
     <>
       <div>
         <SelectedCellProvider>
-          <h1>Plot Perfect</h1>
+        <header className="header">
+          <h1 className="title">Plot Perfect</h1>
+        </header>
           <Form></Form>
           <div id="plant-list">
             <Plant name="Plant" imageurl="https://laidbackgardener.blog/wp-content/uploads/2017/11/20171205a-petr-kratochvil-publicdomainepictures-net.jpg"></Plant>
