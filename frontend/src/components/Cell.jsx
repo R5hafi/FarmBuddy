@@ -1,9 +1,10 @@
 import React from 'react';
 import "../styles/Cell.css"
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { SelectedCellContext } from '../contexts/SelectedCellContext'
-
+import ModalInfo from './ModalInfo';
 function Cell({ id, row, column, size }) {
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     const cellStyle = {
         width: `${size}px`,
@@ -24,13 +25,21 @@ function Cell({ id, row, column, size }) {
         return [...prevSelectedCells, id];
       }
     });
+    setIsModalOpen(true);
   }
 
   return (
-    <div id={id} className="cell" onClick={() => handleClick()} style={cellStyle}>
-      Cell ({row}, {column})
-
-    </div>
+    <>
+      <div id={id} className="cell" onClick={() => handleClick()} style={cellStyle}>
+        Cell ({row}, {column})
+      </div>
+      <ModalInfo 
+        isOpen={isModalOpen} 
+        onRequestClose={() => setIsModalOpen(false)}
+        title="Cell Information"
+        content={`This is cell (${row}, ${column}).`}
+      />
+    </>
   );
 }
 
