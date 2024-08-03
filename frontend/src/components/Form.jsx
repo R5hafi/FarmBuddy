@@ -1,16 +1,19 @@
 import React from "react";
+import '../styles/Form.css'
 
 function Form() {
   return (
     <>
-      <div class="form">
-        <label>N <input type="text" /></label>
-        <label>P <input type="text" /></label>
-        <label>K <input type="text" /></label>
-        <label>Temperature <input type="text" /></label>
-        <label>Humidity <input type="text" /></label>
-        <label>pH <input type="text" /></label>
-        <label>Rainfall <input type="text" /></label>
+      <div id="form-container">
+        <div class="form">
+          <label>Ratio of Nitrogen content in soil <input type="text" /></label>
+          <label>Ratio of Phosphorous content in soil <input type="text" /></label>
+          <label>Ratio of Potassium content in soil <input type="text" /></label>
+          <label>Temperature (&deg;C)<input type="text" /></label>
+          <label>Humidity (%)<input type="text" /></label>
+          <label>pH value of the soil <input type="text" /></label>
+          <label>Rainfall (mm)<input type="text" /></label>
+        </div>
       </div>
     </>
   )
