@@ -1,0 +1,9 @@
+.plant-container {
+  background-color: #006400;
+  border-radius: 80%;
+}
+
+.plant-container img {
+  border-radius: 50%;
+  border: 2px solid black;
+}
