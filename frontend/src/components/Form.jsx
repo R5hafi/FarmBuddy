@@ -7,23 +7,29 @@ function Form() {
   // get context
   const { selectedCells, setSelectedCells } = useContext(SelectedCellContext);
   
-  // get api data
-  useEffect(() => {
-    fetch('http://127.0.0.1:5000/data')
+
+  
+  async function onSubmit() {
+
+      let currentData = 0;
+      let percent = 0;
+      // get data from backend. 
+      await fetch('http://127.0.0.1:5000/data')
       .then((response) => response.json())
       .then((data) => {
-  	console.log(data);
-  }, [])
-  })
-  function onSubmit() {
-
+        currentData = data;
+        // modify selected cells.
+        percent = currentData.percentage;
+        console.log(currentData.Percentage);
+        
+      }, [])
       // toggle off all of the selected cells.
       for (let i = 0; i < selectedCells.length; i++) {
         document.getElementById(selectedCells[i]).classList.toggle('highlight');
+
+        document.getElementById(selectedCells[i]).innerText = `${currentData.percentage}%`;
       }
       setSelectedCells([]);
-      console.log("dsfsdf")
-
       //clear all input values
       document.querySelectorAll(".form label>input").forEach((item) => {
         item.value = "";

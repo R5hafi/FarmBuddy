@@ -17,7 +17,9 @@ function Cell({ id, row, column, size }) {
   
   function handleClick() {
     document.getElementById(id).classList.toggle('highlight');
-    
+    if ((document.getElementById(id).innerText).includes('%')) {
+      setHasData(true);
+    }
     setSelectedCells((prevSelectedCells) => {
       if (prevSelectedCells.includes(id)) {
         return prevSelectedCells.filter((cellId) => cellId !== id);
