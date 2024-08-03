@@ -1,7 +1,19 @@
 import React from "react";
 import '../styles/Form.css'
+import { useContext } from 'react';
+import { SelectedCellContext } from '../contexts/SelectedCellContext'
 
 function Form() {
+  function onSumbit() {
+      // get context
+      const { selectedCells, setSelectedCells } = useContext(SelectedCellContext);
+      // toggle off all of the selected cells.
+      for (let i = 0; i < selectedCells.length; i++) {
+        document.getElementById(selectedCells[i]).classList.toggle('highlight');
+      }
+      setSelectedCells([]);
+  }
+
   return (
     <>
       <div id="form-container">
