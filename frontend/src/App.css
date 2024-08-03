@@ -28,3 +28,10 @@ h1 {
   0% { color: #228B22; }
   100% { color: #006400; }
 }
+
+.soil {
+  background-image: url('./soil_bg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
