@@ -3,4 +3,28 @@ h1 {
   font-size: 350%;
   font-family: "Rockwell";
   color: #228B22;
+  background: linear-gradient(to right, #228B22, #66f566);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 2s ease-in-out, colorChange 5s infinite alternate;
+  margin: 0;
+}
+
+.header {
+  background-color: #e8f7fc; /* Light blue background */
+  border-bottom: 5px solid #7b6d62; /* Brown bottom border */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 32px;
+}
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes colorChange {
+  0% { color: #228B22; }
+  100% { color: #006400; }
 }
