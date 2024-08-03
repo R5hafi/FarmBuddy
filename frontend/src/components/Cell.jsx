@@ -1,7 +1,7 @@
 import React from 'react';
 import "../styles/Cell.css"
 
-function Cell({ id, row, column }) {
+function Cell({ id, row, column, size }) {
 
   function handleClick() {
     document.getElementById(id).classList.toggle("highlight");
@@ -11,7 +11,8 @@ function Cell({ id, row, column }) {
 
   return (
     <div id={id} className="cell" onClick={() => handleClick()}>
-      Cell ({row}, {column})
+      Cell ({row}, {column}, {size})
+
     </div>
   );
 }
