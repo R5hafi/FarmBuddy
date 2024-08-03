@@ -22,15 +22,15 @@ function GridView({count, setCount}) {
     // dynamically scale size.
     let scaleFactor = Math.max(rows, columns);
     let screenSize = getWindowDimensions();
-    setSize(0.5 * (screenSize[0] / scaleFactor / 2));
+    setSize(0.6 * (screenSize[0] / scaleFactor / 2));
 
   }, [rows, columns])
-  const x = 1;
+  
   const grid = []
   for (let i = 0; i< rows; i++) {
     const row = [];
     for (let j=0; j< columns; j++) {
-        row.push(<Cell key={`${i}-${j}`} id={`${i}-${j}`} row ={i} column={j}></Cell>);
+        row.push(<Cell key={`${i}-${j}`} id={`${i}-${j}`} row ={i} column={j} size={size}></Cell>);
     }
     grid.push((
     <div key={i} className="row">
