@@ -14,6 +14,7 @@ function Form() {
           <label>pH value of the soil <input type="text" /></label>
           <label>Rainfall (mm)<input type="text" /></label>
         </div>
+        <button type="submit">Submit</button>
       </div>
     </>
   )

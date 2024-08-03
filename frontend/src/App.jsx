@@ -16,7 +16,6 @@ function App() {
   return (
     <>
       <div>
-
         <SelectedCellProvider>
           <h1>Plot Perfect</h1>
           <Form></Form>
