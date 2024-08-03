@@ -16,7 +16,7 @@ function App() {
     <>
       <div>
         <h1>Plot Perfect</h1>
-        <GridView size={count} setSize={changeCount}></GridView>
+        <GridView count={count} setCount={changeCount}></GridView>
       </div>
     </>
   )

@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import '../styles/GridView.css';
 import Cell from './Cell'
 
-function GridView({size, setSize}) {
+function GridView({count, setCount}) {
   const [rows, setRows] = useState(3);
   const [columns, setColumns] = useState(3);  
   const [size, setSize] = useState(150);
@@ -39,11 +39,11 @@ function GridView({size, setSize}) {
   }
 
   useEffect(() => {
-    const currentSize = rows * columns;
-    if (currentSize !== size) {
-      setSize(currentSize);
+    const currentCount = rows * columns;
+    if (currentCount !== count) {
+      setCount(currentCount);
     }
-  }, [rows, columns, size, setSize]);
+  }, [rows, columns, count, setCount]);
 
   return (
     <div className="grid-view">
