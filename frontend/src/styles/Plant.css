@@ -10,7 +10,8 @@
   display: flex;
   justify-content: center;
   align-items: center; 
-  background-color: #006400;
+  background-color: #228B22;
+
   border-radius: 20% / 50%;
   padding: 10px;
   width: 10%;
@@ -22,10 +23,10 @@
 .plant-container > img {
   border-radius: 50%; 
 
-  height: 30px; /* Set height */
-  width: 30px; /* Set width */
-  object-fit: cover; /* Ensure the image covers the circle without distortion */
-  margin-left: 10px; /* Space between text and image */
+  height: 30px; 
+  width: 30px; 
+  object-fit: cover;
+  margin-left: 10px;
 }
 
 .plant-container > span {
