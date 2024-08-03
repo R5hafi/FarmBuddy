@@ -17,7 +17,8 @@
   border-radius: 4px;
   width: 75%;
   height: 230px;
-  padding-right: 2%;
+  padding-right: 3%;
+  padding-left: 2%;
 }
 
 .form label {
@@ -30,12 +31,15 @@
 }
 
 .form input{
-  margin-left: 10px;
-  margin-right: 2%;
+  margin-left: 3%;
   height: 35%;
   width: 40%;
   font-size: 80%;
   padding-left: 2%;
   border: 2px solid var(--green);
   border-radius: 2px;
+}
+
+.hidden {
+  display: none;
 }

@@ -5,7 +5,7 @@ function Form() {
   return (
     <>
       <div id="form-container">
-        <div class="form">
+        <div className="form">
           <label>Ratio of Nitrogen content in soil <input type="text" /></label>
           <label>Ratio of Phosphorous content in soil <input type="text" /></label>
           <label>Ratio of Potassium content in soil <input type="text" /></label>
