@@ -24,11 +24,11 @@
 .form {
   display: grid;
   grid-template-columns: 0.5fr 0.5fr;
-  border: 4px solid var(--green);
+  border: 3px solid var(--green);
   border-radius: 4px;
   width: 100%;
   height: 230px;
-  background-color: #F0F8FF;
+  background-color: #E0FFFF;
   /*background-color: #E0FFFF;*/
   /*background-image: linear-gradient(to right, #F0F8FF);*/
   padding-top: 2%;

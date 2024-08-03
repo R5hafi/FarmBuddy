@@ -12,7 +12,7 @@ h1 {
 }
 
 .header {
-  background-image: linear-gradient(#F0F8FF, white); /* Light blue background */
+  /*background-image: linear-gradient(#F0F8FF, white);*/
   display: flex;
   justify-content: center;
   align-items: center;

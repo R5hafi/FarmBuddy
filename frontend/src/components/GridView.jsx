@@ -57,7 +57,7 @@ function GridView({count, setCount}) {
 
   return (
     <div className="grid-view">
-      <div>
+      <div id="dimension-container">
         <label>
           Rows:
           <input
