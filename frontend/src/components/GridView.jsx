@@ -62,8 +62,8 @@ function GridView({count, setCount}) {
           Rows:
           <input
             type="number"
-            value={rows}
-            onChange={(e) => setRows(Number(e.target.value))}
+            value={Math.max(1, Math.min(15, rows))}
+            onChange={(e) => setRows(Math.max(1, Math.min(15, Number(e.target.value))))}
             min="1"
             max="15"
           />
@@ -72,8 +72,8 @@ function GridView({count, setCount}) {
           Columns:
           <input
             type="number"
-            value={columns}
-            onChange={(e) => setColumns(Number(e.target.value))}
+            value={Math.max(1, Math.min(15, columns))}
+            onChange={(e) => setColumns(Math.max(1, Math.min(15, Number(e.target.value))))}
             min="1"
             max="15"
           />

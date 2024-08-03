@@ -14,6 +14,11 @@ function Form() {
       }
       setSelectedCells([]);
       console.log("dsfsdf")
+
+      //clear all input values
+      document.querySelectorAll(".form label>input").forEach((item) => {
+        item.value = "";
+      })
   }
 
   return (

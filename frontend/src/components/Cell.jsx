@@ -7,7 +7,8 @@ function Cell({ id, row, column, size }) {
 
     const cellStyle = {
         width: `${size}px`,
-        height: `${size}px`
+        height: `${size}px`,
+        fontSize: `${size / 2.5}px`//change later for percentage display
       };
   
   const { selectedCells, setSelectedCells } = useContext(SelectedCellContext);
