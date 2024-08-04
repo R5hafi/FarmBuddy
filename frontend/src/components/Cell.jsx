@@ -44,7 +44,7 @@ function Cell({ id, row, column, size, modalText }) {
       <ModalInfo 
         isOpen={isModalOpen} 
         onRequestClose={() => setIsModalOpen(false)}
-        title="Cell Information"
+        title="Plot Information"
         content={modalText}
       />
 
