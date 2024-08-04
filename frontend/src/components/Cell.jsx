@@ -39,7 +39,7 @@ function Cell({ id, row, column, size, modalText }) {
   return (
     <>
       <div id={id} className="cell" onClick={() => handleClick()} style={cellStyle}>
-        Plot ({row}, {column})
+        Cell ({row}, {column})
       </div>
       <ModalInfo 
         isOpen={isModalOpen} 
@@ -52,7 +52,7 @@ function Cell({ id, row, column, size, modalText }) {
   );
   } else {
     return <div id={id} className="cell" onClick={() => handleClick()} style={cellStyle}>
-        Plot ({row}, {column})
+        Cell ({row}, {column})
       </div>
   }
 }
