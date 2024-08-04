@@ -52,7 +52,7 @@ function Cell({ id, row, column, size, modalText }) {
   );
   } else {
     return <div id={id} className="cell" onClick={() => handleClick()} style={cellStyle}>
-        Cell ({row}, {column})
+        Plot ({row}, {column})
       </div>
   }
 }
