@@ -7,8 +7,6 @@ function Form() {
   // get context
   const { selectedCells, setSelectedCells } = useContext(SelectedCellContext);
   
-
-  
   async function onSubmit() {
 
       let currentData = 0;
@@ -17,18 +15,17 @@ function Form() {
       await fetch('http://127.0.0.1:5000/data')
       .then((response) => response.json())
       .then((data) => {
-        currentData = data;
         // modify selected cells.
-        percent = currentData.percentage;
-        console.log(currentData.Percentage);
+        percent = data.Percentage;
         
       }, [])
       // toggle off all of the selected cells.
       for (let i = 0; i < selectedCells.length; i++) {
         document.getElementById(selectedCells[i]).classList.toggle('highlight');
-
-        document.getElementById(selectedCells[i]).innerText = `${currentData.Percentage}%`;
+        // change percentage.
+        document.getElementById(selectedCells[i]).innerHTML = `${percent}%`;
       }
+
       setSelectedCells([]);
       //clear all input values
       document.querySelectorAll(".form label>input").forEach((item) => {

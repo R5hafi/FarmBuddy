@@ -25,7 +25,7 @@ const ModalInfo = ({ isOpen, onRequestClose, title, content }) => {
         }
       }}
     >
-      <div class="modal-container">
+      <div className="modal-container">
         <h2>{title}</h2>
         <p>{content}</p>
         <button onClick={onRequestClose}>Close</button>

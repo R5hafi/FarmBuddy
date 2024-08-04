@@ -5,7 +5,7 @@ import Cell from './Cell'
 import { useContext } from 'react';
 import { SelectedCellContext } from '../contexts/SelectedCellContext'
 
-function GridView({count, setCount}) {
+function GridView({count, setCount, modalText}) {
   const [rows, setRows] = useState(3);
   const [columns, setColumns] = useState(3);  
   const [size, setSize] = useState(150);
@@ -20,6 +20,7 @@ function GridView({count, setCount}) {
       height,
     ];
   }
+  
   // run everytime column or row changes.
   useEffect(() => {
     // dynamically scale size.
@@ -40,7 +41,7 @@ function GridView({count, setCount}) {
   for (let i = 0; i< rows; i++) {
     const row = [];
     for (let j=0; j< columns; j++) {
-        row.push(<Cell key={`${i}-${j}`} id={`${i}-${j}`} row ={i} column={j} size={size}></Cell>);
+        row.push(<Cell key={`${i}-${j}`} id={`${i}-${j}`} row ={i} column={j} size={size} modalText={modalText}></Cell>);
     }
     grid.push((
     <div key={i} className="row">
