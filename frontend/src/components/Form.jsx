@@ -51,7 +51,7 @@ function Form() {
           <label>Humidity (%)<input type="text" value={humidity} onChange={(e) => setHumidity(e.target.value)} /></label>
           <label>pH value of the soil <input type="text" value={pH} onChange={(e) => setPH(e.target.value)} /></label>
           <label>Rainfall (mm)<input type="text" value={rainfall} onChange={(e) => setRainfall(e.target.value)} /></label>
-          <label>Plant <input type="text" value={plant} onChange={(e) => setPlant(e.target.value)} /></label>
+          <label>Plant <input id="plant-name" type="text" value={plant} onChange={(e) => setPlant(e.target.value)} /></label>
         </div>
         <button type="submit" onClick={handleSubmit}>Submit</button>
       </div>
