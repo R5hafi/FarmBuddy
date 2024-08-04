@@ -50,10 +50,10 @@ function App() {
 
           <Form></Form>
           <div id="plant-list">
-            <Plant name="Plant" imageurl="https://laidbackgardener.blog/wp-content/uploads/2017/11/20171205a-petr-kratochvil-publicdomainepictures-net.jpg"></Plant>
-            <Plant name="Plant" imageurl="https://laidbackgardener.blog/wp-content/uploads/2017/11/20171205a-petr-kratochvil-publicdomainepictures-net.jpg"></Plant>
-            <Plant name="Plant" imageurl="https://laidbackgardener.blog/wp-content/uploads/2017/11/20171205a-petr-kratochvil-publicdomainepictures-net.jpg"></Plant>
-            <Plant name="Plant" imageurl="https://laidbackgardener.blog/wp-content/uploads/2017/11/20171205a-petr-kratochvil-publicdomainepictures-net.jpg"></Plant>
+            <Plant name="Sunflower" imageurl="https://www.gardendesign.com/pictures/images/675x529Max/site_3/ring-of-fire-sunflower-bicolor-sunflower-all-america-selections_12080.jpg"></Plant>
+            <Plant name="Soybeans" imageurl="https://cdn.britannica.com/28/154828-050-05C6239A/Soybeans.jpg"></Plant>
+            <Plant name="Lavender" imageurl="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Single_lavender_flower02.jpg/1200px-Single_lavender_flower02.jpg"></Plant>
+            <Plant name="Wheat" imageurl="https://www.foodnavigator.com/var/wrbm_gb_food_pharma/storage/images/publications/food-beverage-nutrition/foodnavigator.com/news/science/wheat-yields-boosted-and-protein-content-increased-by-up-to-25-study/15414079-1-eng-GB/Wheat-yields-boosted-and-protein-content-increased-by-up-to-25-study.jpg"></Plant>
           </div>
           
             <GridView count={count} setCount={changeCount} modalText={suggestion === "" ? "Sample placeholder." : suggestion}></GridView>
