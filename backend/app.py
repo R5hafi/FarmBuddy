@@ -1,40 +1,46 @@
-from flask import Flask, jsonify
-from flask_cors import CORS
-import random
-import requests
+from flask import Flask, request, jsonify
+import subprocess
 
 app = Flask(__name__)
-CORS(app, origins=['http://localhost:5173'])
 
-@app.route('/')
-def main():
-    client_id = "OWfTxB3Xz1oVbzLe00eR71U9d5UmWPVkPhd_O9DTLvo"
-    url = f"https://api.unsplash.com/search/photos?query=sunflower&client_id={client_id}"
-    #this is getting a url for an image of a sunflower
-    # return 'very cool API!!'
+@app.route('/evaluate', methods=['POST'])
+def evaluate():
+    data = request.json
+    N = data['N']
+    P = data['P']
+    K = data['K']
+    temperature = data['temperature']
+    humidity = data['humidity']
+    pH = data['pH']
+    rainfall = data['rainfall']
+    plant = data['plant'].lower()  # Convert plant name to lowercase
+
+    # Construct the command
+    command = [
+        'python', 'predict.py',
+        '--N', str(N),
+        '--P', str(P),
+        '--K', str(K),
+        '--temperature', str(temperature),
+        '--humidity', str(humidity),
+        '--pH', str(pH),
+        '--rainfall', str(rainfall),
+        'evaluate',
+        '--plant', plant
+    ]
+
+    # Run the command
+    result = subprocess.run(command, capture_output=True, text=True)
+    output = result.stdout.strip()
+
+    # Extract the success rate from the output
     try:
-        req = requests.get(url)
-        req.raise_for_status() 
-        data = req.json()
-        
-        if 'results' in data and len(data['results']) > 0:
-            # Choose a random photo from the results
-            random_photo = random.choice(data['results'])
-            image_url = random_photo['urls']['regular']
-            return jsonify({"image_url": image_url})  # Return the image URL as JSON
-        else:
-            return jsonify({"error": "No results found"}), 404
-    except requests.exceptions.HTTPError as http_err:
-        return jsonify({"error": f"HTTP error occurred: {http_err}"}), 500
-    except Exception as err:
-        return jsonify({"error": f"Other error occurred: {err}"}), 500
-    
+        success_rate = float(output.split(':')[-1].strip().replace('%', ''))
+    except ValueError:
+        success_rate = 0
 
+    return jsonify({'success_rate': success_rate})
 
-@app.route('/data')
-def data():
-   return {"Percentage" :random.randint(0, 100)}
+if __name__ == '__main__':
+    app.run(debug=True)
 
-
-if __name__ == "__main__":
-  app.run(debug=True)
